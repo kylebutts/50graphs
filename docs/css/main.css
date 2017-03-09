@@ -1,0 +1,154 @@
+/*
+	NAV STYLING
+*/
+body{
+	font-size: 16px;
+	background: #eee;
+}
+
+nav {
+	background: #32353f;
+	border-bottom: 2px solid #444;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 8rem;
+	z-index: 99;
+}
+nav .container{
+	display:block;
+	width: 70%;
+	margin: 0 auto;
+}
+nav #logo{
+	padding: 1rem 1rem 1rem 2rem;
+	float: left;
+	height: 6rem;
+	display: inline-block;
+}
+nav h1{
+	float: left;
+	padding: 1rem 0rem;
+	display: inline-block;
+	line-height: 6rem;
+	font-size: 2rem;
+	font-family: sans-serif;
+	color: #ddd;
+}
+nav #github{
+	float: right;
+	color: #ddd;
+	line-height: 6rem;
+	padding: 1rem 0rem;
+	font-size: 2rem;
+}
+nav #docs{
+	float: right;
+	color: #ddd;
+	line-height: 6rem;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	font-family: sans-serif;
+}
+nav, nav *{
+	transition: all 0.25s ease-in;
+}
+.nav--shrink{
+	height: 5rem;
+}
+.nav--shrink #logo{
+	height: 3rem;
+}
+.nav--shrink h1{
+	line-height: 3rem;
+}
+.nav--shrink #github{
+	line-height: 3rem;
+}
+.nav--shrink #docs{
+	line-height: 3rem;
+}
+
+nav a{
+	text-decoration: none;
+}
+nav a:hover{
+	color: #fff!important;
+	cursor: pointer;
+}
+nav h1:hover{
+	color: #fff;
+	cursor: pointer;
+}
+
+/* Content */
+#content{
+	margin-top: 8rem;
+	padding-top: 2rem;
+}
+
+/*
+	CODE SNIPPETS
+*/
+.code-snippet{
+	margin: 2rem 0;
+}
+.code-toggle{
+	display: block;
+	background: #32353f;
+	color: #fff;
+	height: 4rem;
+	border-top-left-radius: .5rem;
+	border-top-right-radius: .5rem;
+}
+.code-toggle:hover{
+	cursor: pointer;
+}
+.code-toggle p{
+	font-size: 2rem;
+	line-height: 4rem;
+	padding-left: 2rem;
+	display: inline-block;
+	font-family: sans-serif;
+}
+.code-toggle i{
+	float: right;
+	font-size: 2rem;
+	line-height: 4rem;
+	padding-right: 2rem;
+}
+.code-snippet pre{
+	height: 30rem;
+	overflow: scroll;
+	border-bottom-left-radius: .5rem;
+	border-bottom-right-radius: .5rem;
+}
+.code-snippet pre.hidden{
+	display: none;
+}
+
+
+/* Reference */
+
+#reference-nav{
+	top: 9rem;
+	transition: all 0.25s ease-in-out;
+}
+.content--shrink #reference-nav{
+	top: 6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* */

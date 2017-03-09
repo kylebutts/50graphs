@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<script src="../js/Fifty_graphs.js" charset="utf-8"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://use.fontawesome.com/f89e285c78.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../js/main.js"></script>
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/simple-grid.css">
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- Code Highlight -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+
+</head>
+
+<body>
+	<nav>
+		<div class="container">
+			<img id="logo" src="../logo.svg" alt="50graphs">
+			<h1>50graphs.js</h1>
+
+			<a id="github" href="github.com/kylebutts/50graphs">
+				<i class="fa fa-github" aria-hidden="true"></i>
+			</a>
+			<a id="docs" href="#reference">Docs</a>
+
+			<div style="clear: both;"></div>
+		</div>
+	</nav>
+
+	<div id="content" class=".content--reference">
+		<div class="container">
+			<div id="reference" class="row">
+				<div id="reference-nav" class="col-3" style="position: fixed;">
+					<h1>Reference</h1>
+
+					<ul>
+						<li>Data Format</li>
+						<li>Initializing</li>
+						<li>Options</li>
+					</ul>
+				</div>
+				<div class="col-3"></div>
+				<div class="col-9">
+					<div class="row">
+						<h2>Data Format</h2>
+					</div>
+
+					<div class="row">
+						<h2>Initializing</h2>
+					</div>
+
+					<div class="row">
+						<h2>Options</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+		<!-- <pre>
+			<code class="javascript">
+				var config = {
+				    "el": "#g-container-1",
+				    "data": data
+				};
+				var map_1 = new Fifty_graphs(config);
+
+				map_1.graph = function(data, g) {
+				    g.append("rect")
+				        .attr("width", 80)
+				        .attr("height", 80)
+				        .attr("fill", "#ddd")
+
+				    var graph = g.append("g")
+				    graph.append("circle").attr("cx", 40).attr("cy", 40).attr("r", 6)
+				        .attr("fill", function() {
+				            if (data["2000"] > 0) {
+				                return "red";
+				            } else {
+				                return "blue";
+				            }
+				        })
+				}
+				map_1.draw();
+			</code></pre> -->
+		<div style="height: 1000px; background-color: #eee;"></div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
