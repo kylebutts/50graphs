@@ -159,6 +159,7 @@ window.Fifty_graphs = (function (){
 					})
 
 				el.options.data.forEach(function (d,i){
+
 					if( state.label == d.label ){
 						el.graph(d.data, g, el.variables)
 					}
