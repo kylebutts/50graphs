@@ -202,6 +202,47 @@ nav h1:hover{
 	margin: 1rem 0;
 }
 
+/* Phone Your Rep */
+#tip{
+	width: 60%;
+    margin: 2rem auto;
+}
+#tip h1{
+	text-align: center;
+	font-family: "Open Sans" sans-serif;
+}
+#phone-intro{
+	text-align: center;
+	font-family: "Open Sans" sans-serif;
+	font-size: 2rem;
+	line-height: 3rem;
+}
+.tooltip-header {
+	display: block;
+	background: #32353f;
+	color: #fff;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 2rem;
+	text-align: center;
+	font-family: "Open Sans";
+	border-top: 0.25rem solid #967BBA;
+}
+.tooltip-list {
+	border: 2px solid #32353f;
+	padding: 0.5rem 0;
+}
+.tooltip-list li{
+	text-align: center;
+    width: 50%;
+    float: left;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+.tooltip-list a{
+	color: #333;
+}
+
 
 
 

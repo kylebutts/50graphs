@@ -2208,38 +2208,75 @@ examples.phone_your_rep = function() {
 		"break": 640
 	};
 
-	var tooltip = d3.select(config.el).append("div").attr("id", "tip")
+	var selected = null;
 
+
+	console.log(d3.select(config.el).append("div").attr("class", "row").append("h1").attr("id", "phone-intro").text("Click your state to view your reps"))
 
 	var map = new Fifty_graphs(config);
+
+
+
 	map.graph = function(state_data, g, vars){
 		var width = vars.g_width
 		var id = g.attr("id")
+
+
 		g.append("rect")
 			.attr("width", width)
 			.attr("height", width)
-			.attr("fill", "#967BBA")
-			.attr("stroke-weight", "1px")
-			.attr("stroke", "#ddd")
+			.attr("fill", function(){
+				if(id == selected){
+					return "#6e4f96";
+				}
+				return "#967BBA";
+			})
+			.attr("stroke-width", function(){
+				if(id == selected){
+					return "3px";
+				}
+				return "1px";
+			})
+			.attr("stroke", function(){
+				if(id == selected){
+					return "#555";
+				}
+				return "#ddd";
+			})
 
 		g.append("text").attr("x", (width / 2)).attr("y", 20).style("text-anchor", "middle").style("vertical-align", "center").style("font-family", "sans-serif").style("fill", "#ddd").text(id)
 
 		g.on("click", function(){
 			tooltip.html('');
 
+			var id = d3.select(this).attr("id")
+			tooltip.append("h1").attr("class","tooltip-header").text("Congresmembers of "+ id + ":")
 
-			var id = d3.select(this).attr("id")	
-			tooltip.append("h1").attr("class","tooltip-header").text("Congress People of "+ id + ":")
-
-			tooltip.selectAll("p").data(state_data).enter().append("p").append("a")
+			var list = tooltip.append("ul").attr("class","tooltip-list")
+			list.selectAll("li").data(state_data).enter().append("li").append("a")
 				.text(function(d){
 					return d.name;
 				}).attr("href", function(d){
 					return d.url;
 				})
+			list.append("div").style("clear", "both")
+
+			for(var i = 0; i < data.length; i++){
+				if(data[i].selected){
+					data[i].selected = false;
+				}
+				if(id == data[i].label){
+					data[i].selected = true;
+				}
+			}
+			selected = id;
+			map.updateData(data);
+			map.redraw();
+
 		})
-
-
 	}
+
 	map.draw()
+
+	var tooltip = d3.select(config.el).append("div").attr("id", "tip").attr("class", "row")
 }
