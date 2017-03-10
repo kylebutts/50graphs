@@ -1,0 +1,181 @@
+<code class="javascript">
+	function randomData() {
+		return (Math.random() > 0.5) ? "#C81305" : "#0485A8"
+	}
+	var data = [{
+			"data": randomData(),
+			"label": "AK"
+		}, {
+			"data": randomData(),
+			"label": "ME"
+		}, {
+			"data": randomData(),
+			"label": "VT"
+		}, {
+			"data": randomData(),
+			"label": "NH"
+		}, {
+			"data": randomData(),
+			"label": "WA"
+		}, {
+			"data": randomData(),
+			"label": "ID"
+		}, {
+			"data": randomData(),
+			"label": "MT"
+		}, {
+			"data": randomData(),
+			"label": "ND"
+		}, {
+			"data": randomData(),
+			"label": "MN"
+		}, {
+			"data": randomData(),
+			"label": "MI"
+		}, {
+			"data": randomData(),
+			"label": "NY"
+		}, {
+			"data": randomData(),
+			"label": "MA"
+		}, {
+			"data": randomData(),
+			"label": "RI"
+		}, {
+			"data": randomData(),
+			"label": "OR"
+		}, {
+			"data": randomData(),
+			"label": "UT"
+		}, {
+			"data": randomData(),
+			"label": "WY"
+		}, {
+			"data": randomData(),
+			"label": "SD"
+		}, {
+			"data": randomData(),
+			"label": "IA"
+		}, {
+			"data": randomData(),
+			"label": "WI"
+		}, {
+			"data": randomData(),
+			"label": "IN"
+		}, {
+			"data": randomData(),
+			"label": "OH"
+		}, {
+			"data": randomData(),
+			"label": "PA"
+		}, {
+			"data": randomData(),
+			"label": "NJ"
+		}, {
+			"data": randomData(),
+			"label": "CT"
+		}, {
+			"data": randomData(),
+			"label": "CA"
+		}, {
+			"data": randomData(),
+			"label": "NV"
+		}, {
+			"data": randomData(),
+			"label": "CO"
+		}, {
+			"data": randomData(),
+			"label": "NE"
+		}, {
+			"data": randomData(),
+			"label": "MO"
+		}, {
+			"data": randomData(),
+			"label": "IL"
+		}, {
+			"data": randomData(),
+			"label": "KY"
+		}, {
+			"data": randomData(),
+			"label": "WV"
+		}, {
+			"data": randomData(),
+			"label": "VA"
+		}, {
+			"data": randomData(),
+			"label": "MD"
+		}, {
+			"data": randomData(),
+			"label": "DE"
+		}, {
+			"data": randomData(),
+			"label": "AZ"
+		}, {
+			"data": randomData(),
+			"label": "NM"
+		}, {
+			"data": randomData(),
+			"label": "KS"
+		}, {
+			"data": randomData(),
+			"label": "AR"
+		}, {
+			"data": randomData(),
+			"label": "TN"
+		}, {
+			"data": randomData(),
+			"label": "NC"
+		}, {
+			"data": randomData(),
+			"label": "SC"
+		}, {
+			"data": randomData(),
+			"label": "DC"
+		}, {
+			"data": randomData(),
+			"label": "OK"
+		}, {
+			"data": randomData(),
+			"label": "LA"
+		}, {
+			"data": randomData(),
+			"label": "MS"
+		}, {
+			"data": randomData(),
+			"label": "AL"
+		}, {
+			"data": randomData(),
+			"label": "GA"
+		}, {
+			"data": randomData(),
+			"label": "HI"
+		}, {
+			"data": randomData(),
+			"label": "TX"
+		}, {
+			"data": randomData(),
+			"label": "FL"
+		}];
+
+	var config = {
+		"el": "#g-container",
+		"data": data
+	};
+	var map = new Fifty_graphs(config);
+
+	map.graph = function(state_data, g) {
+		var id = g.attr("id")
+
+		g.append("rect")
+			.attr("width", 80)
+			.attr("height", 80)
+			.attr("fill", function(){
+				return state_data
+			})
+			.attr("stroke-weight", "1px")
+			.attr("stroke", "#ddd")
+
+		g.append("text").attr("x", 40).attr("y", 20).style("text-anchor", "middle").style("vertical-align", "center").style("font-family", "sans-serif").style("color","#333").text(id)
+	}
+	map.draw();
+</code>

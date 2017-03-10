@@ -2,7 +2,7 @@
 $(function() {
     // Sticky Nav
     $(window).scroll(function() {
-        if ($(this).scrollTop() >= 64) {
+        if ($(this).scrollTop() >= 48) {
             $('nav').addClass('nav--shrink')
             $('#content').addClass('content--shrink')
         } else {
@@ -16,5 +16,4 @@ $(function() {
 		$(this).parent().children('pre').toggleClass('hidden')
 		$(this).children('i').toggleClass('fa-angle-up').toggleClass('fa-angle-down')
 	})
-
 });

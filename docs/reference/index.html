@@ -17,10 +17,14 @@
 	<link rel="stylesheet" href="../css/simple-grid.css">
 	<link rel="stylesheet" href="../css/main.css">
 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+
 	<!-- Code Highlight -->
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
 
 
 </head>
@@ -28,13 +32,18 @@
 <body>
 	<nav>
 		<div class="container">
-			<img id="logo" src="../logo.svg" alt="50graphs">
-			<h1>50graphs.js</h1>
+			<a href="../">
+				<img id="logo" src="../logo.svg" alt="50graphs">
+			</a>
+
+			<a href="../">
+				<h1>50graphs.js</h1>
+			</a>
 
 			<a id="github" href="github.com/kylebutts/50graphs">
 				<i class="fa fa-github" aria-hidden="true"></i>
 			</a>
-			<a id="docs" href="#reference">Docs</a>
+			<a id="docs" href="./">Docs</a>
 
 			<div style="clear: both;"></div>
 		</div>
@@ -43,68 +52,146 @@
 	<div id="content" class=".content--reference">
 		<div class="container">
 			<div id="reference" class="row">
-				<div id="reference-nav" class="col-3" style="position: fixed;">
-					<h1>Reference</h1>
 
-					<ul>
-						<li>Data Format</li>
-						<li>Initializing</li>
-						<li>Options</li>
-					</ul>
+				<!-- Needed to make position:fixed work -->
+				<div id="reference-nav" class="container">
+					<div class="row">
+						<div class="col-3">
+							<h1>Reference</h1>
+
+							<ul>
+								<li><a href="#ref-overview">Overview</a></li>
+								<li><a href="#ref-draw">Draw and Redraw</a></li>
+								<li><a href="#ref-data">Data Format</a></li>
+								<li><a href="#ref-options">Options</a></li>
+								<li><a href="#ref-update-data">Update Data</a></li>
+								<li><a href="#ref-examples">Examples</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
+
 				<div class="col-3"></div>
-				<div class="col-9">
-					<div class="row">
+				<div id="docs" class="col-9">
+					<div class="row" id="ref-overview">
+						<h2>Overview</h2>
+						<p>This charting library simplifies creating multiple instances for each of the 50 states. The user gives data for all 50 states, a graph() function, a regraph() function and the library will take care of the rest.</p>
+						<p>The minimal code to create a 50graph chart is as follows:</p>
+						<div class="code-snippet">
+							<pre><code class="javascript">
+	var data = [{
+		"data": { ... },
+		"label": "AK"
+	},{
+		"data": { ... },
+		"label": "ME"
+	}, {
+		"data": { ... },
+		"label": "VT"
+	}, ...
+	];
+
+	var config = {
+		"el": "#g-container",
+		"data": data,
+		"break": 768
+	};
+
+	var map = new Fifty_graphs(config);
+
+	map.graph(state_data, g, vars){
+		/* Code for each state graph goes here */
+	}
+
+	map.draw()
+							</code></pre>
+						</div>
+
+					</div>
+
+					<div class="row" id="ref-draw">
+						<h2>Draw and redraw</h2>
+						<p>
+							The api creates 50 svg g elements and places them in the appropriate layout. The graph() and regraph() functions will be called for each g element and provided three parameters: state_data, g, vars.
+						</p>
+						<p>
+							Note that the graph() and regraph() function will have (0,0) be the top left corner of that particular svg g element.
+						</p>
+						<div class="code-snippet">
+							<pre><code class="">
+	state_data: the individual "data" that matches that state's label.
+	g: the d3 selection for that svg g element.
+	vars: the JS object that contains 4 variables.
+		vars.svg_width: the width of the svg
+		vars.svg_height: the height of the svg
+		vars.g_width: the width of the g element's alloted space.
+		vars.g_height: the height of the g element's alloted space.
+							</code></pre>
+						</div>
+					</div>
+
+					<div class="row" id="ref-data">
 						<h2>Data Format</h2>
+						<p>Data must be in the form of an array of JSON objects with a "label" key with the state's abbreviation and a "data" key with whatever data you will need to access.</p>
+						<p>Note: You will be able to have this data be editable and repass into the draw function.</p>
+						<div class="code-snippet">
+							<pre><code class="javascript">
+	[{
+		"data": { ... },
+		"label": "AK"
+	},{
+		"data": { ... },
+		"label": "ME"
+	}, {
+		"data": { ... },
+		"label": "VT"
+	}, ...
+							</code></pre>
+						</div>
 					</div>
 
-					<div class="row">
-						<h2>Initializing</h2>
-					</div>
-
-					<div class="row">
+					<div class="row" id="ref-options">
 						<h2>Options</h2>
+						<p>There are a few options avaialable for the map</p>
+						<div class="code-snippet">
+							<pre><code class="">
+	var config = {
+		el: [string] the div id that you are appending the graphic to,
+		data: [object] the data you are supplying to the initial graph() function,
+		breakpoint: [int] the pixel width that you want the graphic to rotate 90 degrees
+	}
+							</code></pre>
+						</div>
 					</div>
+
+					<div class="row" id="ref-update-data">
+						<h2>Update Data</h2>
+						<p>
+							For more interactive work, you may want to allow the state's data to update and have 50graphs redraw itself. There is a function to update the data before calling redraw().
+						</p>
+						<div class="code-snippet">
+							<pre><code class="javascript">
+	/* Update Data however you would like */
+	map.updateData(data);
+	map.redraw();
+							</code></pre>
+						</div>
+					</div>
+
+					<div class="row" id="ref-examples">
+						<h2>Examples</h2>
+						<p>
+							For examples, <a href="../">click here</a> and read through the code!
+						</p>
+					</div>
+
+
 				</div>
 			</div>
 		</div>
 	</div>
 
-
-
-
-		<!-- <pre>
-			<code class="javascript">
-				var config = {
-				    "el": "#g-container-1",
-				    "data": data
-				};
-				var map_1 = new Fifty_graphs(config);
-
-				map_1.graph = function(data, g) {
-				    g.append("rect")
-				        .attr("width", 80)
-				        .attr("height", 80)
-				        .attr("fill", "#ddd")
-
-				    var graph = g.append("g")
-				    graph.append("circle").attr("cx", 40).attr("cy", 40).attr("r", 6)
-				        .attr("fill", function() {
-				            if (data["2000"] > 0) {
-				                return "red";
-				            } else {
-				                return "blue";
-				            }
-				        })
-				}
-				map_1.draw();
-			</code></pre> -->
-		<div style="height: 1000px; background-color: #eee;"></div>
 	</div>
-
-
-
-
 
 
 

@@ -4,6 +4,7 @@
 body{
 	font-size: 16px;
 	background: #eee;
+	box-sizing: border-box;
 }
 
 nav {
@@ -20,12 +21,19 @@ nav .container{
 	display:block;
 	width: 70%;
 	margin: 0 auto;
+	max-height: 100%;
 }
 nav #logo{
 	padding: 1rem 1rem 1rem 2rem;
-	float: left;
+
 	height: 6rem;
 	display: inline-block;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 nav h1{
 	float: left;
@@ -52,6 +60,7 @@ nav #docs{
 	font-family: sans-serif;
 }
 nav, nav *{
+	font-family: 'Open Sans';
 	transition: all 0.25s ease-in;
 }
 .nav--shrink{
@@ -86,6 +95,7 @@ nav h1:hover{
 #content{
 	margin-top: 8rem;
 	padding-top: 2rem;
+	min-height: 100vh;
 }
 
 /*
@@ -99,8 +109,7 @@ nav h1:hover{
 	background: #32353f;
 	color: #fff;
 	height: 4rem;
-	border-top-left-radius: .5rem;
-	border-top-right-radius: .5rem;
+	border-top: 0.25rem solid #967BBA;
 }
 .code-toggle:hover{
 	cursor: pointer;
@@ -119,10 +128,8 @@ nav h1:hover{
 	padding-right: 2rem;
 }
 .code-snippet pre{
-	height: 30rem;
+	max-height: 30rem;
 	overflow: scroll;
-	border-bottom-left-radius: .5rem;
-	border-bottom-right-radius: .5rem;
 }
 .code-snippet pre.hidden{
 	display: none;
@@ -132,12 +139,69 @@ nav h1:hover{
 /* Reference */
 
 #reference-nav{
-	top: 9rem;
-	transition: all 0.25s ease-in-out;
+	position: fixed;
 }
-.content--shrink #reference-nav{
-	top: 6rem;
+#reference-nav .col-3{
+	border-left: 2px solid #967BBA;
+	padding-left: .5rem;
 }
+#reference-nav h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5rem;
+	color: #333;
+}
+#reference-nav ul li{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: .5rem;
+}
+#reference-nav ul li a{
+	color: #444;
+	text-decoration: none;
+	transition: all 0.1s ease-out;
+}
+#reference-nav ul li a:hover{
+	color: #967BBA;
+}
+#docs{
+	margin-bottom: 8rem;
+}
+#docs h2{
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+	border-bottom: 2px solid #5CA3BF;
+    margin-bottom: 1rem;
+}
+#docs > .row > p{
+    font-family: 'Source Sans Pro';
+	font-size: 1rem;
+	line-height: 1.25rem;
+	margin-top: 0.5rem;
+}
+
+/* For Anchor Links */
+:target:before {
+	content:"";
+	display:block;
+	height: 6rem; /* fixed header height*/
+	margin: -6rem 0 0 0; /* negative fixed header height */
+}
+
+
+
+/* Select and Examples */
+.selectric-wrapper{
+	width: 20%;
+	margin: 0 auto;
+}
+#examples-label{
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	margin: 1rem 0;
+}
+#g-container{
+	margin: 1rem 0;
+}
+
 
 
 
