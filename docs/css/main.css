@@ -246,14 +246,71 @@ nav h1:hover{
 
 
 
+/* Responsive */
+@media only screen and (max-width: 719px) {
 
+	/* Nav */
+	nav {
+		height: 6rem;
+	}
+	nav #logo{
+		padding: 1rem 1rem 1rem 1rem;
+		height: 4rem;
+		float: left;
+		position: static;
+	}
+	nav h1{
+		display: none;
+	}
+	nav #github{
+		float: right;
+		line-height: 4rem;
+		font-size: 2rem;
+	}
+	nav #docs{
+		float: right;
+		line-height: 4rem;
+		padding-right: 1rem;
+		font-size: 2rem;
+	}
+	.nav--shrink{
+		height: 6rem;
+	}
+	.nav--shrink #logo{
+		height: 4rem;
+	}
+	.nav--shrink h1{
+		line-height: 4rem;
+	}
+	.nav--shrink #github{
+		line-height: 4rem;
+	}
+	.nav--shrink #docs{
+		line-height: 4rem;
+	}
 
+	/* Content */
+	#content{
+		margin-top: 6rem;
+		padding-top: 2rem;
+		min-height: 100vh;
+	}
 
+	/* Docs */
+	#reference-nav{
+		display: none;
+	}
+}
 
-
-
-
-
-
-
-/* */
+@media only screen and (max-width: 420px){
+	nav #logo{
+		padding: 1.5rem 1rem 1.5rem 1rem;
+		height: 3rem;
+	}
+	nav #github{
+		font-size: 1.5rem;
+	}
+	nav #docs{
+		font-size: 1.5rem;
+	}
+}

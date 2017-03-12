@@ -227,183 +227,463 @@ examples.wsj = function(){
 	map.draw();
 }
 
-examples.flip_state = function() {	function randomData() {
-		return (Math.random() > 0.5) ? "#C81305" : "#0485A8"
-	}
-	var data = [{
-			"data": randomData(),
+examples.flip_state = function() {
+	var data_initial = [{
+			"data": {
+				"ev": 3,
+				"p": "R"
+			},
 			"label": "AK"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 4,
+				"p": "D"
+			},
 			"label": "ME"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 3,
+				"p": "D"
+			},
 			"label": "VT"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 4,
+				"p": "D"
+			},
 			"label": "NH"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 12,
+				"p": "D"
+			},
 			"label": "WA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 4,
+				"p": "R"
+			},
 			"label": "ID"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 3,
+				"p": "R"
+			},
 			"label": "MT"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 3,
+				"p": "R"
+			},
 			"label": "ND"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 10,
+				"p": "D"
+			},
 			"label": "MN"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 16,
+				"p": "S"
+			},
 			"label": "MI"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 29,
+				"p": "D"
+			},
 			"label": "NY"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 11,
+				"p": "D"
+			},
 			"label": "MA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 4,
+				"p": "D"
+			},
 			"label": "RI"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 7,
+				"p": "D"
+			},
 			"label": "OR"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 6,
+				"p": "R"
+			},
 			"label": "UT"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 3,
+				"p": "R"
+			},
 			"label": "WY"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 3,
+				"p": "R"
+			},
 			"label": "SD"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 6,
+				"p": "R"
+			},
 			"label": "IA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 10,
+				"p": "S"
+			},
 			"label": "WI"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 11,
+				"p": "R"
+			},
 			"label": "IN"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 18,
+				"p": "S"
+			},
 			"label": "OH"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 20,
+				"p": "S"
+			},
 			"label": "PA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 14,
+				"p": "D"
+			},
 			"label": "NJ"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 7,
+				"p": "D"
+			},
 			"label": "CT"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 55,
+				"p": "D"
+			},
 			"label": "CA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 6,
+				"p": "D"
+			},
 			"label": "NV"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 9,
+				"p": "D"
+			},
 			"label": "CO"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 5,
+				"p": "R"
+			},
 			"label": "NE"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 10,
+				"p": "R"
+			},
 			"label": "MO"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 20,
+				"p": "D"
+			},
 			"label": "IL"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 8,
+				"p": "R"
+			},
 			"label": "KY"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 5,
+				"p": "R"
+			},
 			"label": "WV"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 13,
+				"p": "S"
+			},
 			"label": "VA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 10,
+				"p": "D"
+			},
 			"label": "MD"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 3,
+				"p": "D"
+			},
 			"label": "DE"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 11,
+				"p": "R"
+			},
 			"label": "AZ"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 5,
+				"p": "S"
+			},
 			"label": "NM"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 6,
+				"p": "R"
+			},
 			"label": "KS"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 6,
+				"p": "R"
+			},
 			"label": "AR"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 11,
+				"p": "R"
+			},
 			"label": "TN"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 15,
+				"p": "R"
+			},
 			"label": "NC"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 9,
+				"p": "R"
+			},
 			"label": "SC"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 3,
+				"p": "D"
+			},
 			"label": "DC"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 7,
+				"p": "R"
+			},
 			"label": "OK"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 8,
+				"p": "R"
+			},
 			"label": "LA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 6,
+				"p": "R"
+			},
 			"label": "MS"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 9,
+				"p": "R"
+			},
 			"label": "AL"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 16,
+				"p": "R"
+			},
 			"label": "GA"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 4,
+				"p": "D"
+			},
 			"label": "HI"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 38,
+				"p": "R"
+			},
 			"label": "TX"
 		}, {
-			"data": randomData(),
+			"data": {
+				"ev": 29,
+				"p": "S"
+			},
 			"label": "FL"
 		}];
+	var data = data_initial
 
 	var config = {
 		"el": "#g-container",
 		"data": data
 	};
+
+	d3.select(config.el).append("div").attr("class", "row").append("h1").attr("id", "phone-intro").text("Click a state to flip the results")
+
+	var svg_width = parseInt(d3.select(config.el).style("width"))
+	var svg_height = "60"
+	var svg = d3.select(config.el).append("svg").attr("width", svg_width).attr("height", svg_height)
+
+	d3.select(window).on('resize', updateBar)
+
+	var r,s,d;
+	function updateBar(){
+		console.log("update")
+		svg_width = parseInt(d3.select(config.el).style("width"))
+		svg.attr("width", svg_width).attr("height", svg_height)
+	}
+	function computeScores(){
+		r = 0;
+		s = 0;
+		d = 0;
+		for(var i = 0; i < data.length; i++){
+			if(data[i].data.p == "R"){
+				r += data[i].data.ev
+			} else if(data[i].data.p == "S"){
+				s += data[i].data.ev
+			} else {
+				d += data[i].data.ev
+			}
+		}
+	}
+	function drawBar(){
+		svg.html('')
+		svg.append("rect").attr("width", function(){
+				return r/538 * svg_width
+			})
+			.attr("height", "60")
+			.attr("fill","#D75C5C")
+			.attr("x", function(){
+				return (1 - r/538) * svg_width
+			})
+			.attr("y", 0)
+
+		svg.append("rect").attr("width", function(){
+				return d/538 * svg_width
+			})
+			.attr("height", "60")
+			.attr("fill","#3989CB")
+			.attr("x", function(){
+				return 0
+			})
+			.attr("y", 0)
+
+		svg.append("rect").attr("width", function(){
+				return svg_width
+			})
+			.attr("height", "60")
+			.attr("fill","none")
+			.attr("stroke", "#bbb")
+			.attr("stroke-width", "4px")
+			.attr("x", 0)
+			.attr("y", 0)
+
+		svg.append("text").attr("x", 15)
+			.attr("y", 38)
+			.text(function(){
+				return "D: " + d;
+			})
+			.style("font-size", "24px")
+			.style("font-family", "Open Sans, sans-serif")
+			.style("fill", "#fff")
+
+		svg.append("text").attr("x", function(){
+				return svg_width - 15
+			})
+			.attr("y", 38)
+			.text(function(){
+				return "R: " + r;
+			})
+			.attr("text-anchor", "end")
+			.style("font-size", "24px")
+			.style("font-family", "Open Sans, sans-serif")
+			.style("fill", "#fff")
+
+		svg.append("rect")
+			.attr("width", "4px")
+			.attr("height", "60px")
+			.attr("fill", "#bbb")
+			.attr("x", function(){
+				return svg_width/2-2
+			})
+	}
+	computeScores();
+
 	var map = new Fifty_graphs(config);
 
-	map.graph = function(state_data, g) {
+	map.graph = function(state_data, g, vars) {
+		drawBar()
+
 		var id = g.attr("id")
 
 		g.append("rect")
-			.attr("width", 80)
-			.attr("height", 80)
+			.attr("width", vars.g_width)
+			.attr("height", vars.g_width)
 			.attr("fill", function(){
-				return state_data
+				if(state_data.p == "R"){
+					return "#D75C5C"
+				}
+				else if(state_data.p == "D"){
+					return "#3989CB"
+				}else{
+					return "transparent"
+				}
 			})
-			.attr("stroke-weight", "1px")
-			.attr("stroke", "#ddd")
+			.attr("stroke-width", function(){
+				if(state_data.p == "S"){
+					return "4px"
+				}
+				return "1px"
+			})
+			.attr("stroke", function(){
+				if(state_data.p == "S"){
+					return "#bbb"
+				}
+				return "#ddd"
+			})
+			.on("click", function(){
+				for(var i = 0; i < data.length; i++){
+					if(data[i].label == id){
+						if(data[i].data.p == "R"){
+							data[i].data.p = "S"
+						} else if(data[i].data.p == "S"){
+							data[i].data.p = "D"
+						} else {
+							data[i].data.p = "R"
+						}
+					}
+				}
+				computeScores()
 
-		g.append("text").attr("x", 40).attr("y", 20).style("text-anchor", "middle").style("vertical-align", "center").style("font-family", "sans-serif").style("color","#333").text(id)
+				map.redraw();
+			})
+
+		g.append("text").attr("x", function(){ return vars.g_width/2 }).attr("y", 20).style("text-anchor", "middle").style("vertical-align", "center").style("font-family", "sans-serif").style("color","#333").text(id)
+
 	}
 	map.draw();
 }
@@ -2211,7 +2491,7 @@ examples.phone_your_rep = function() {
 	var selected = null;
 
 
-	console.log(d3.select(config.el).append("div").attr("class", "row").append("h1").attr("id", "phone-intro").text("Click your state to view your reps"))
+	d3.select(config.el).append("div").attr("class", "row").append("h1").attr("id", "phone-intro").text("Click your state to view your reps")
 
 	var map = new Fifty_graphs(config);
 

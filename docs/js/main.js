@@ -1,6 +1,7 @@
 // My Functions
 $(function() {
     // Sticky Nav
+	
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 48) {
             $('nav').addClass('nav--shrink')
