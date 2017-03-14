@@ -1,4 +1,4 @@
-![Logo]("/docs/logo.png")
+![Logo](/docs/logo.png)
 
 # 50graphs.js
 
