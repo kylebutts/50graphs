@@ -49,4 +49,4 @@ Below is the WSJ's graphic remade in 50graphs.js. View more examples on the main
   <img src="/docs/wsj_remade.png">
 </p>
 
-*Inspiration comes from WSJ “A Field Guide to Red and Blue America”: [WSL](http://graphics.wsj.com/elections/2016/field-guide-red-blue-america/)*
+*Inspiration comes from WSJ “A Field Guide to Red and Blue America”: [WSJ](http://graphics.wsj.com/elections/2016/field-guide-red-blue-america/)*
