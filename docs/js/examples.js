@@ -665,6 +665,8 @@ examples.flip_state = function() {
 				}
 				return "#ddd"
 			})
+
+		g.style("cursor", "pointer")
 			.on("click", function(){
 				for(var i = 0; i < data.length; i++){
 					if(data[i].label == id){
@@ -680,9 +682,14 @@ examples.flip_state = function() {
 				computeScores()
 
 				map.redraw();
-			})
+				})
 
 		g.append("text").attr("x", function(){ return vars.g_width/2 }).attr("y", 20).style("text-anchor", "middle").style("vertical-align", "center").style("font-family", "sans-serif").style("color","#333").text(id)
+		g.append("text").attr("x", function(){ return vars.g_width/2 }).attr("y", function(){
+			return vars.g_width/2+20
+		}).style("text-anchor", "middle").style("vertical-align", "center").style("font-family", "sans-serif").style("font-size", "1.75rem").style("color","#333").text(function(){
+			return state_data.ev
+		})
 
 	}
 	map.draw();
@@ -2493,6 +2500,8 @@ examples.phone_your_rep = function() {
 
 	d3.select(config.el).append("div").attr("class", "row").append("h1").attr("id", "phone-intro").text("Click your state to view your reps")
 
+	var tooltip = d3.select(config.el).append("div").attr("id", "tip").attr("class", "row")
+
 	var map = new Fifty_graphs(config);
 
 
@@ -2558,5 +2567,4 @@ examples.phone_your_rep = function() {
 
 	map.draw()
 
-	var tooltip = d3.select(config.el).append("div").attr("id", "tip").attr("class", "row")
 }
