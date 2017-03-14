@@ -38,7 +38,8 @@ map.graph = function(state_data, vars, g){
 }
 map.draw()
 
-// To trigger redraw after updated data, you only need to call redraw function
+// To trigger redraw after updated data, you only need to call updateData and redraw function
+map.updateData(data)
 map.redraw()
 ```
 
