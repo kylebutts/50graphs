@@ -6,9 +6,6 @@
 # 50graphs.js
 *50graphs.js* is a charting library that allows 50 instances
 
-<p align="center">
-  <img src="/docs/wsj_remade.png">
-</p>
 
 ## Reference
 
@@ -45,8 +42,10 @@ map.redraw()
 ```
 
 ## Examples
-View examples on the main page. [50graphs.js page](http://kylebutts.github.io/50graphs)
+Below is the WSJ's graphic remade in 50graphs.js. View more examples on the main page. [50graphs.js page](http://kylebutts.github.io/50graphs)
 
-
+<p align="center">
+  <img src="/docs/wsj_remade.png">
+</p>
 
 *Inspiration comes from WSJ “A Field Guide to Red and Blue America”: [WSL](http://graphics.wsj.com/elections/2016/field-guide-red-blue-america/)*
