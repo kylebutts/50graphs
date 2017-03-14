@@ -8,7 +8,7 @@
 
 
 ## Reference
-**[Documentation](kylebutts.github.io/50graphs/docs)**
+**[Documentation](http://kylebutts.github.io/50graphs/docs)**
 
 ## Installing
 ```html
