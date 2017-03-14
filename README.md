@@ -1,18 +1,18 @@
 # 50graphs.js
 
-<a href="http://kylebutts.github.io/50graphs"><img src="/docs/logo.png" align="left" hspace="10" vspace="6"></a>
+<div style="text-align: center;"><a href="http://kylebutts.github.io/50graphs"><img src="/docs/logo.png"></a></div>
 *50graphs.js* is a graphing logo
 
 ## Reference
 
 ## Installing
-'''html
+```html
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="50graphs.js"></script>
-'''
+```
 
 ## Basic Usage
-'''JavaScript
+```JavaScript
 var data = [{
   "label": "AK",
   "data": /* Valid JSON data will go here */
@@ -35,8 +35,7 @@ map.draw()
 
 // To trigger redraw after updated data, you only need to call redraw function
 map.redraw()
-
-'''
+```
 
 ## Examples
 View examples on the main page. [50graphs.js page](http://kylebutts.github.io/50graphs)
