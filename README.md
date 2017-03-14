@@ -1,6 +1,6 @@
 # 50graphs.js
 
-<a href="kylebutts.github.io/50graphs"><img src="raw.githubusercontent.com/kylebutts/50graphs/docs/logo.svg" align="left" hspace="10" vspace="6"></a>
+<a href="http://kylebutts.github.io/50graphs"><img src="/docs/logo.svg" align="left" hspace="10" vspace="6"></a>
 ** 50graphs.js ** is a graphing logo
 
 
