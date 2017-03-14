@@ -1,7 +1,14 @@
-# 50graphs.js
 
-<div style="text-align: center;"><a href="http://kylebutts.github.io/50graphs"><img src="/docs/logo.png"></a></div>
-*50graphs.js* is a graphing logo
+
+<p align="center">
+  <a href="http://kylebutts.github.io/50graphs"><img src="/docs/logo.png"></a>
+</p>
+# 50graphs.js
+*50graphs.js* is a charting library that allows 50 instances
+
+<p align="center">
+  <img src="/docs/wsj_remade.png">
+</p>
 
 ## Reference
 
