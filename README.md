@@ -3,7 +3,7 @@
 </p>
 
 # 50graphs.js
-*50graphs.js* is a charting library that allows 50 instances
+*50graphs.js* is a charting library that allows 50 instances of a d3 graph be placed in the relative shape of the U.S. map. 
 
 
 ## Reference
