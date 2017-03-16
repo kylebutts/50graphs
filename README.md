@@ -1,8 +1,7 @@
-
-
 <p align="center">
   <a href="http://kylebutts.github.io/50graphs"><img src="/docs/logo.png"></a>
 </p>
+
 # 50graphs.js
 *50graphs.js* is a charting library that allows 50 instances
 
